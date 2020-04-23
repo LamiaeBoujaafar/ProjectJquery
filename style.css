@@ -9,10 +9,8 @@ ul,ol
 }
 body
 {
-    background: #f9e8cb url('image/background.png') repeat-x;
+    background: #f9e8cb;
     font-family: Arial,sans-serif;
-    
-    
 }
 header 
 {
@@ -24,7 +22,7 @@ header
 section
 {
      background: #f9e8cb url('image/background.png') repeat-x;
-    margin-top: 0px;
+    margin-top: 15px;
 }
 header h1
 {
@@ -42,5 +40,84 @@ header h1
     width: 980px;
     height: 500px;
     margin: 0 auto;
-    padding-top: 99px;
+    padding-top: 115px;
+}
+#main-menu ul li
+{
+    float: left;
+    width: 140px;
+    height: 433px;
+    overflow: hidden;
+    position: relative;
+}
+.bw
+{
+    width: 140px;
+    height: 433px;
+    background: url('image/bg.jpg') no-repeat;
+    cursor: pointer;
+    position: absolute;
+   
+    
+}
+.color
+{
+     width: 140px;
+    height: 433px;
+    background: url('image/color.jpg') no-repeat;
+    cursor: pointer;
+    position: absolute;
+    left: 140px;
+    
+}
+#part2 div
+{
+    background-position: -140px;
+}
+#part3 div
+{
+    background-position: -280px;
+}
+#part4 div
+{
+    background-position: -420px;
+}
+#part5 div
+{
+    background-position: -560px;
+}
+.description
+{
+    position: absolute;
+    left: 140px;
+    width: 240px;
+    height: 400px;
+    padding: 20px;
+    background: #ffffff;
+}
+.description h2
+{
+    padding-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+}
+.description h3
+{
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 26px;
+    background: #ac1027;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 5px;
+}
+.description p
+{
+    padding-top: 35px;
+    font-size: 22px;
+    color: black;
+    text-align: center;
 }
