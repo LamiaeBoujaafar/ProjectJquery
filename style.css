@@ -138,8 +138,8 @@ header h1
 .button
 {
     float: left;
-    width: 200px;
-    margin-left: 30px;
+    width: 180px;
+    margin: 10px;
     padding: 10px 0;
     position: relative;
     right: 50%;
@@ -155,7 +155,7 @@ header h1
     opacity: 0.9;
     
 }
-.button:hover
+.hovered
 {
     background:#a67b5b ;
     font-size: 24px;

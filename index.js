@@ -27,6 +27,28 @@ $(function(){
                         }
                 }   
             }); 
+        $(".button").hover(function(){
+            $(this).addClass("hovered");
+        },function(){
+            $(this).removeClass("hovered");
+        });
+        $(".button").click(function(){
+            var newIndex = $(this).index(),
+                $items = $mainmenuItems.eq(newIndex);
+                if(openIndex === newIndex)
+                {
+                    animate($items,false,250);
+                    openIndex = -1;
+                }else
+                {
+                    if(validIndex(newIndex))
+                        {
+                            animate($mainmenuItems.eq(openIndex),false,250);
+                            openIndex = newIndex;
+                            animate($items,true,250);
+                        }
+                }
+        });
     }
     validIndex = function(indexToceck)
     {
