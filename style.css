@@ -19,7 +19,7 @@ header
 
     
 }
-section
+#main-menu
 {
      background: #f9e8cb url('image/background.png') repeat-x;
     margin-top: 15px;
@@ -46,14 +46,14 @@ header h1
 {
     float: left;
     width: 140px;
-    height: 433px;
+    height: 431px;
     overflow: hidden;
     position: relative;
 }
 .bw
 {
     width: 140px;
-    height: 433px;
+    height: 431px;
     background: url('image/bg.jpg') no-repeat;
     cursor: pointer;
     position: absolute;
@@ -63,7 +63,7 @@ header h1
 .color
 {
      width: 140px;
-    height: 433px;
+    height: 431px;
     background: url('image/color.jpg') no-repeat;
     cursor: pointer;
     position: absolute;
@@ -120,4 +120,44 @@ header h1
     font-size: 22px;
     color: black;
     text-align: center;
+}
+/*section button menu*/
+.button-menu
+{
+    float: left;
+    width: 100%;
+    padding: 100px 0 50px 0;
+}
+.button-menu ul
+{
+    float: left;
+     position: relative; 
+    left: 50%;
+    text-align: center;
+}
+.button
+{
+    float: left;
+    width: 200px;
+    margin-left: 30px;
+    padding: 10px 0;
+    position: relative;
+    right: 50%;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(0,0,0,0.7);
+    background: #ac1027;
+    
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0.9;
+    
+}
+.button:hover
+{
+    background:#a67b5b ;
+    font-size: 24px;
+    
 }

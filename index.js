@@ -26,8 +26,7 @@ $(function(){
                             animate($items,true,250);
                         }
                 }   
-            });
-        
+            }); 
     }
     validIndex = function(indexToceck)
     {
