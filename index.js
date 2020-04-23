@@ -2,29 +2,33 @@ $(function(){
     var $mainmenuItems = $("#main-menu ul").children("li"),
     total = $mainmenuItems.length,
         openIndex = 2,
-        init = function(){
-            bindEvents();
+        
+    init = function(){
+        bindEvents();
         if(validIndex(openIndex))
+        {
+            animate($mainmenuItems.eq(openIndex),true,700);
+        }
+    };
+    bindEvents = function()
+    {
+        $mainmenuItems.children(".image").click(function()
             {
-                animate($mainmenuItems.eq(openIndex),true,700);
-            }
-        };
-    bindEvents = function(){
-        $mainmenuItems.children(".image").click(function(){
                 var newIndex = $(this).parent().index(),
                 $items = $mainmenuItems.eq(newIndex);
                 if(openIndex === newIndex)
                 {
                     animate($items,false,250);
                     openIndex = -1;
-                }else
+                }
+                else
                 {
                     if(validIndex(newIndex))
-                        {
-                            animate($mainmenuItems.eq(openIndex),false,250);
-                            openIndex = newIndex;
-                            animate($items,true,250);
-                        }
+                    {
+                        animate($mainmenuItems.eq(openIndex),false,250);
+                        openIndex = newIndex;
+                        animate($items,true,250);
+                    }
                 }   
             }); 
         $(".button").hover(function(){
@@ -32,22 +36,23 @@ $(function(){
         },function(){
             $(this).removeClass("hovered");
         });
-        $(".button").click(function(){
+        $(".button").click(function()
+        {
             var newIndex = $(this).index(),
-                $items = $mainmenuItems.eq(newIndex);
-                if(openIndex === newIndex)
-                {
-                    animate($items,false,250);
-                    openIndex = -1;
-                }else
-                {
-                    if(validIndex(newIndex))
-                        {
-                            animate($mainmenuItems.eq(openIndex),false,250);
-                            openIndex = newIndex;
-                            animate($items,true,250);
-                        }
-                }
+            $items = $mainmenuItems.eq(newIndex);
+            if(openIndex === newIndex)
+            {
+                animate($items,false,250);
+                openIndex = -1;
+            }else
+            {
+                if(validIndex(newIndex))
+                    {
+                        animate($mainmenuItems.eq(openIndex),false,250);
+                        openIndex = newIndex;
+                        animate($items,true,250);
+                    }
+            }
         });
     }
     validIndex = function(indexToceck)
